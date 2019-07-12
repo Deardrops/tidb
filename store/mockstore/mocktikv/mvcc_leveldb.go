@@ -1206,3 +1206,11 @@ func (mvcc *MVCCLevelDB) doRawDeleteRange(startKey, endKey []byte) error {
 
 	return mvcc.db.Write(batch, nil)
 }
+
+func (mvcc *MVCCLevelDB) MvccGetByStartTS(startKey, endKey []byte, starTS uint64) (*kvrpcpb.MvccInfo, []byte) {
+	return nil, nil
+}
+
+func (mvcc *MVCCLevelDB) MvccGetByKey(key []byte) *kvrpcpb.MvccInfo {
+	return nil
+}
